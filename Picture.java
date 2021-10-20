@@ -33,12 +33,11 @@ public class Picture
         grass = new Square();
         grass.makeVisible();
         grass.changeColor("green");
-        grass.moveVertical(-143);
+        grass.moveVertical(143);
         grass.moveHorizontal(-320);
         grass.changeSize(500);
         
     
-        
         wall = new Square();
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
@@ -69,6 +68,17 @@ public class Picture
     /**
      * Change this picture to black/white display
      */
+   public void atardecer()
+    {
+        sun.makeVisible();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(0);
+        sun.changeSize(80);
+        sun.slowMoveVertical(200);
+        
+      
+    }
+    
     public void setBlackAndWhite()
     {
         if (wall != null)   // only if it's painted already...
